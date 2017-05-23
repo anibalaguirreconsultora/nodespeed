@@ -1,0 +1,43 @@
+{
+  "name": "customer",
+  "base": "PersistedModel",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+
+    "age": {
+      "type": "number"
+    },
+
+    "size": {
+      "type": "number",
+
+      "index": {
+        "unique": true
+      }
+    }
+  },
+
+  "relations": {
+    "profile": {
+      "type": "hasOne",
+      "model": "profile"
+    }
+  },
+
+  "indexes": {
+
+    "name_index": {
+      "keys": {"name": 1},
+
+      "options": {
+         "unique": true
+       }
+    },
+
+    "age_index": {"age": -1}
+  }
+
+}

@@ -1,0 +1,3 @@
+interface IDirectories {
+    dist: string
+}

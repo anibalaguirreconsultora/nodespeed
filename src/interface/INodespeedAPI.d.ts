@@ -1,0 +1,3 @@
+interface INodespeedAPI {
+    config:any 
+}

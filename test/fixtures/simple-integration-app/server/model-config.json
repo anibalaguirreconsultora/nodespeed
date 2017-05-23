@@ -1,0 +1,86 @@
+{
+  "_meta": {
+
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "email": {
+    "dataSource": "mail",
+    "public": false
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "db",
+    "public": true
+  },
+  "widget": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "widgetA": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "widgetB": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "store": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "storeWithReplaceOnPUTfalse": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "storeWithReplaceOnPUTtrue": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "physician": {
+    "dataSource": "db",
+    "public": true
+  },
+  "patient": {
+    "dataSource": "db",
+    "public": true
+  },
+  "appointment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "customer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "profile": {
+    "dataSource": "db",
+    "public": true
+  }
+}
+

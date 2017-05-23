@@ -1,0 +1,10 @@
+{
+  "name": "widgetA",
+  "base": "widget",
+  "properties": {
+    "nameA": {
+      "type": "string",
+      "default": "DefaultWidgetName"
+    }
+  }
+}

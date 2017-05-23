@@ -1,0 +1,54 @@
+{
+  "name": "nodespeed",
+  "main": "dist/nodespeed.js",
+  "version": "0.12.2",
+  "authors": [
+    "Julian Lyndon-Smith <julian@whogloo.com>"
+  ],
+  "description": "nodespeed transaction engine",
+  "moduleType": [],
+  "license": "UNLICENCED",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "cli",
+    "spec",
+    "storage",
+    "gulpfile.js",
+    "karma*"
+  ],
+  "dependencies": {
+    "jquery": "2.0.3",
+    "angular": "^1.6.0",
+    "angular-resource": "~1.5.0",
+    "angular-ui-router": "^0.3.1",
+    "ui-router-extras": "^0.1.2",
+    "angular-translate": "^2.10.0",
+    "angular-translate-loader-url": "^2.10.0",
+    "angular-translate-loader-partial": "^2.10.0",
+    "angular-uuid4": "^0.3.1",
+    "js-data": "^2.9.0",
+    "js-data-localstorage": "^2.3.2",
+    "js-data-angular": "^3.2.1",
+    "angular-history": "^0.8.1",
+    "change-case": "3.0.1-2",
+    "angular-uuids": "^0.0.4",
+    "lodash": "3.10.1",
+    "chance": "^1.0.3",
+    "pluralize": "^3.0.0",
+    "angular-pubsub": "^1.0.0",
+    "angular-animate": "^1.6.0"
+  },
+  "resolutions": {
+    "jquery": "2.0.3",
+    "angular": "^1.6.0",
+    "lodash": "3.10.1",
+    "angular-ui-router": "^0.3.1"
+  }
+}

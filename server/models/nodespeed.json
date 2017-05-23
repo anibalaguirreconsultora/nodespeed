@@ -1,0 +1,80 @@
+{
+  "name": "Nodespeed",
+  "plural": "nodespeed",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "isSystemModel": true,
+    "nodespeed": {
+
+    }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "info": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "nodespeed instance information"
+        }
+      ],
+      "description": "Returns information about the nodespeed instance",
+      "http": [
+        {
+          "path": "/info",
+          "verb": "get"
+        }
+      ]
+    },
+
+    "dataDictionary": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "array",
+          "root": true,
+          "description": "nodespeed data dictionary"
+        }
+      ],
+      "description": "Returns the application data dictionary",
+      "http": [
+        {
+          "path": "/datadictionary",
+          "verb": "get"
+        }
+      ]
+    },
+
+    "saveDataDictionary": {
+      "accepts": [{
+          "arg": "data",
+          "type": "array",
+          "root": true,
+          "description": "array of models to save"
+        }],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "result"
+        }
+      ],
+      "description": "update / create dataDictionary models",
+      "http": [
+        {
+          "path": "/datadictionary",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# nodespeed
+nodespeed for strongloop
