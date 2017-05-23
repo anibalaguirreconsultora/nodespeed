@@ -1,0 +1,3 @@
+[submodule "nodespeed.sdk"]
+	path = nodespeed.sdk
+	url = git@github.com:whoGloo/nodespeed.sdk.git
