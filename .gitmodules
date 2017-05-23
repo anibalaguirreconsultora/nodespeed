@@ -1,3 +1,6 @@
 [submodule "nodespeed.sdk"]
 	path = nodespeed.sdk
 	url = git@github.com:whoGloo/nodespeed.sdk.git
+[submodule "nodesports"]
+	path = nodesports
+	url = git@bitbucket.org:whoGloo/nodesports.git
