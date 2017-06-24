@@ -7,26 +7,25 @@ import { Config } from './config';
 import { Schema } from '../schema';
 
 const path = require('path');
+const fs = require('fs');
+
 const moduleAlias = require('module-alias');
 
-moduleAlias.addAlias('loopback-boot',path.join(__dirname,'../node_modules/loopback-boot'));
+let setAlias = (module) => {
+    let modPath = path.join(__dirname,`../node_modules/${module}`);
+
+    if (fs.existsSync(modPath)) {
+        moduleAlias.addAlias(module,modPath);
+    }
+}
+
+setAlias('loopback-boot');
 
 const debug = require('debug')('nodespeed.server');
 const loopback = require('loopback');
 
-moduleAlias.addAlias('loopback/lib',path.join(__dirname,'../node_modules/loopback/lib'));
+setAlias('loopback/lib');
 moduleAlias.addAlias('loopback',path.join(__dirname,'../'));
-
-// const ModelDefinition = require('loopback-datasource-juggler/lib/model-definition.js');
-
-// moduleAlias.addAlias('./model-definition.js',path.join(__dirname,'../node_modules/loopback-datasource-juggler/lib/model-definition.js'));
-
-// ModelDefinition.prototype._defineProperty = ModelDefinition.prototype.defineProperty;
-
-// ModelDefinition.prototype.defineProperty = function(propertyName, propertyDefinition) {
-//   console.log("xx")
-//   ModelDefinition.prototype._defineProperty(propertyName,propertyDefinition).bind(ModelDefinition.prototype)
-// };
 
 const callsite = require('callsite');
 const finder = require('find-package-json');

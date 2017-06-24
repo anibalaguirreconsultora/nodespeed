@@ -1,8 +1,9 @@
+"use strict";
 // Copyright whogloo, inc. 2017. All Rights Reserved.
 // Node module: @whogloo/nodespeed
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
-"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const debugInfo = require('debug')("nodespeed.dictionary.info");
 const debugErr = require('debug')("nodespeed.dictionary.error");
 const changeCase = require('change-case');
@@ -154,7 +155,7 @@ class Dictionary {
                 if (!property.type) {
                     property.type = 'string';
                 }
-                if (typeof property.type === 'function') {
+                if (typeof property.type === 'function' || typeof property.type === "object") {
                     return;
                 }
                 if (dataType.indexOf(property.type.toLowerCase()) === -1) {
@@ -525,12 +526,12 @@ class Dictionary {
                 }
                 ;
                 if (hasUnique) {
-                    model.nodespeed.primaryIndexId = index._id;
+                    model.options.nodespeed.primaryIndexId = index._id;
                 }
             });
         }
         else {
-            hasUnique = !!model.index[model.nodespeed.primaryIndexId];
+            hasUnique = !!model.index[model.options.nodespeed.primaryIndexId];
         }
         if (!hasUnique) {
             let newIndex = {

@@ -154,7 +154,7 @@ export class Dictionary implements IDictionary {
     private defineLayout = (model:IModel) => {
         let nameList = ['name','description','title'];
 
-        let grid = model.options.nodespeed.layout.grid;
+        let grid:any = model.options.nodespeed.layout.grid;
 
         grid.columns = [];
 
@@ -211,7 +211,7 @@ export class Dictionary implements IDictionary {
                 property.type = 'string';
             }
 
-            if (typeof property.type === 'function') {
+            if (typeof property.type === 'function' || typeof property.type === "object") {
                 return;
             }
 
@@ -605,12 +605,12 @@ export class Dictionary implements IDictionary {
                 };
 
                 if (hasUnique) {
-                    model.nodespeed.primaryIndexId = index._id;
+                    model.options.nodespeed.primaryIndexId = index._id;
                 }
             });
 
         } else {
-            hasUnique = !!model.index[model.nodespeed.primaryIndexId];
+            hasUnique = !!model.index[model.options.nodespeed.primaryIndexId];
         }
 
         if (!hasUnique) {
