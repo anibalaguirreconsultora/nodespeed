@@ -75,7 +75,7 @@
     "strong-error-handler": "^1.0.1",
     "uglify-js-brunch": "^2.10.0",
     "url": "^0.11.0",
-    "uws": "^0.12.0",
+    "uws": "^8.14.0",
     "yeoman-environment": "^1.6.6"
   },
   "devDependencies": {
