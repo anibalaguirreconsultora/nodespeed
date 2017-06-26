@@ -118,7 +118,7 @@ let convertModels = () =>  {
                 name: property.name,
                 type: property.type,
                 _id: property.id,
-
+ 
                 nodespeed: {
                     modelId: definition._id
                 }
@@ -127,6 +127,10 @@ let convertModels = () =>  {
 
             if (property._id) {
                 propDef.id = property._id;
+            }
+            
+            if (property.postgresql) {
+                propDef.postgresql = property.postgresql;
             }
 
             definition.properties[property.name] = propDef;
